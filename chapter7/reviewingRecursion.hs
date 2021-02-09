@@ -28,3 +28,7 @@ dividedBy a b = go a b 0
          | (abs first < abs second)                               = (Result count, first)
          | (first > 0 && second < 0) || (first < 0 && second > 0) = go (first + second) second (count - 1)
          | otherwise                                              = go (first - second) second (count + 1)
+
+mc91 n
+  | n > 100  = n - 10
+  | n <= 100 = mc91 (mc91 (n + 11))
