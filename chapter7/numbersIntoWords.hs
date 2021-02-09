@@ -24,4 +24,4 @@ digits n = go n []
 
 
 wordNumber :: Int -> String
-wordNumber n = undefined
+wordNumber n = concat . intersperse "-" . map digitToWord . digits $ n
